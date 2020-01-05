@@ -47,9 +47,9 @@ BEGIN
   Write('Шаг: ');
   ReadLn(H);
   WRITE('Порядок функции Бесселя: '); 
-  READ(P[1]);
+  READLN(P[1]);
   WRITE('Погрешность вычисления ряда: '); 
-  READ(P[2]);    
+  READLN(P[2]);    
   X:=X0;
   WHILE X<=X9 DO
   BEGIN
