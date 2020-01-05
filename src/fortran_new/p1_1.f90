@@ -30,7 +30,7 @@ DO
     Exit
   END IF
     
-  PRINT *, X, ' ', F(X, P)
+  PRINT *, X, F(X, P)
   X=X+H
 END DO
 
