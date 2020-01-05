@@ -38,29 +38,30 @@ Contains
 
 Real(8) Function F(X, P)
 
-Real(8),dimension(2) :: P
+Real(8),dimension(2),intent(in) :: P
 Real(8),intent(in) :: X
 
 Real(8) :: R, T
 Integer :: N, I
 
-  R=X/2 
-  T=1.0 
-  N=INT(P(1))
-  DO I=1, N
-    T=T*R/I
-  END DO
-  I=1 
-  R=-R*R
-  F=T
-  DO 
-    IF (ABS(T)<=P(2)) THEN
-      Exit
-    END IF
-    T=T*R/(I*(I+N)) 
-    F=F+T
-    I=I+1
-  END DO
+R=X/2 
+T=1.0 
+N=INT(P(1))
+DO I=1, N
+  T=T*R/I
+END DO
+I=1 
+R=-R*R
+F=T
+DO 
+  IF (ABS(T)<=P(2)) THEN
+    Exit
+  END IF
+  T=T*R/(I*(I+N)) 
+  F=F+T
+  I=I+1
+END DO
+
 End Function F
 
 End program p1_1
