@@ -14,7 +14,7 @@
 {$mode objfpc}
 Uses Math;
 Type
-  TParams = ARRAY [1..9] OF Double; 
+  TParams = ARRAY [1..2] OF Double; 
   
 FUNCTION F(X: Double; P: TParams): Double;
 VAR 
