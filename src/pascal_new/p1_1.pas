@@ -12,11 +12,11 @@
 {$mode objfpc}
 
 Type
-  TParams = array[1..2] of Real; 
+  TParams = array[1..2] of Double; 
 
-FUNCTION F(X: REAL; P: TParams): REAL;
+FUNCTION F(X: Double; P: TParams): Double;
 VAR 
-  R, T: REAL; 
+  R, T: Double; 
   N, I: INTEGER;
 BEGIN 
   R:=X/2; 
@@ -37,7 +37,7 @@ END;
 
 VAR 
   P: TParams;
-  X, X0, X9, H: Real;
+  X, X0, X9, H: Double;
 
 BEGIN
   WRITE('Начальная точка (X0): ');
