@@ -10,6 +10,7 @@
 ! 	H - шаг.
 !*********************************************
 Program p1_1
+implicit none
 
 Real(8),dimension(2) :: P
 Real(8) :: X, X0, X9, H
