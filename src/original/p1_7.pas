@@ -3,11 +3,11 @@
  * МЕТОД ПРОСТЫХ ИТЕРАЦИЙ
  *
  * На входе:
- *	B = -6
- *	X = 1
- *	E - 1e-6
- *	M = 20
- *	N = 1
+ *	B = -6,    произвольная константа
+ *	X =  1,    начальное приблежение к корню
+ *	E -  1e-6, погрешность
+ *	M =  20,   максимальное число итераций
+ *	N =  1,    количество параметров, по количеству ячеек P
  *	P[1] = 0.95
  * На выходе:
  *	X = 1.385903
@@ -17,6 +17,7 @@ VAR
   B, X, E: REAL;
   M, N, K: Integer;
 
+{ Исследуемая функция }
 FUNCTION F(X: REAL): REAL;
 CONST PI = 3.14159265;
 VAR 
@@ -36,6 +37,7 @@ BEGIN
   F:=X+B*S;
 END;
 
+{ Метод простых итераций }
 PROCEDURE ITER(VAR B, X, E: REAL; M: INTEGER{; FUNCTION F: REAL});
 VAR 
   X1, R: REAL; 
@@ -45,6 +47,7 @@ BEGIN
   BEGIN
     X1:=X; 
     X:=F(X);
+    writeln(X);
     IF ABS(X - X1)<E THEN 
       EXIT;
     IF I = M THEN 
